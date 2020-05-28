@@ -170,16 +170,14 @@ def quality_ratings(s):
     s -- score: a single score from the dictionary of metadata scores
 
     '''
-    if s <= 50:
+    if s <= 66:
         return "Not Rated"
-    elif s > 50 and s <= 70:
+    elif s > 66 and s <= 75:
         return "Bronze"
-    elif s > 70 and s <= 80:
+    elif s > 75 and s <= 85:
         return "Silver"
-    elif s > 80 and s <= 90:
+    elif s > 85:
         return "Gold"
-    elif s > 90:
-        return "Platinum"
 
 def attribute_weighted_score(s, w):
     '''Applies the provided attribute weightings to the completeness and error score.
